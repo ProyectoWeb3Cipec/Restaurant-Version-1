@@ -1,0 +1,14 @@
+
+<div class="container">
+  <h1>Búsqueda</h1>
+  <form>
+    <input type="text" [(ngModel)]="terminoDeBusqueda" placeholder="Buscar...">
+    <button (click)="buscar()">Buscar</button>
+    <button (click)="limpiarBusqueda()">Limpiar</button>
+  </form>
+  <ul>
+    <li *ngFor="let resultado of resultados">
+      {{ resultado.nombre }} - {{ resultado.descripcion }}
+    </li>
+  </ul>
+</div>
