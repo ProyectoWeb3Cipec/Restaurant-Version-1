@@ -6,18 +6,25 @@ import { ContadorCantidadComponent } from "../../core/components/contador-cantid
 import { ProductosService } from '../../core/services/productos.service';
 import { Producto } from '../../core/interfaces/productos';
 import { RouterModule } from '@angular/router';
+import { PaymentService } from '../../core/services/payment.service';
+import { FormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-carrito',
   templateUrl: './carrito.component.html',
   styleUrls: ['./carrito.component.css'],
   standalone:true,
-  imports: [CommonModule, ContadorCantidadComponent, RouterModule]
+  imports: [CommonModule, ContadorCantidadComponent, RouterModule, FormsModule]
 })
 export class CarritoComponent {
   headerService = inject(HeaderService);
   cartService = inject(CartService);
   productosService = inject(ProductosService);
+  metodoPago: 'QR' | 'Efectivo' = 'QR'; 
+  monto: number = 100;  
+  pagoRealizado: number = 0;  
+  estadoTransaccion: string = 'Pendiente'; 
 
   productosCarrito:Producto[]=[];
 
@@ -50,4 +57,23 @@ cambiarCantidadProducto(id:number, cantidad:number){
     this.calcularInformacion();
   }
 
+  
+  
+  constructor(private paymentService: PaymentService) {}
+  verificarPago(): void {
+    const transaccion = {
+      metodo: this.metodoPago,
+      monto: this.monto,
+      pagoRealizado: this.pagoRealizado,
+      estado: 'Pendiente' as 'Pendiente' | 'Pagado',
+    };
+
+    const resultado = this.paymentService.verificarPago(transaccion);
+    this.estadoTransaccion = resultado.estado;
+
+    if (this.metodoPago === 'Efectivo' && resultado.estado === 'Pagado') {
+      const cambio = this.pagoRealizado - this.monto;
+      console.log(`El cambio es: ${cambio}`);
+    }
+  }
 }

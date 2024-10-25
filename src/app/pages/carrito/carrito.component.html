@@ -1,24 +1,25 @@
 <div tarjetas-container>
   <div *ngFor="let producto of cartService.carrito, index as i" class="tarjeta-producto-container">
-     <ng-container *ngIf="productosCarrito[i]">
-          <div id="izq" [ngStyle]="{'background-image':'url('+productosCarrito[i].fotoUrl+')'}">
-          </div>
-          <div id="centro">
-              <p>{{productosCarrito[i].nombre}}</p>
-              <p *ngIf="producto.notas[i] !==''">{{producto.notas}}</p> 
-              <app-contador-cantidad [cantidadInicial]="producto.cantidad"
-               (cantidadCambiada)="cambiarCantidadProducto(producto.idProducto,$event)">   
-              </app-contador-cantidad>
-          </div>
-          <div id="der">
-              <button id="borrar" (click)="eliminarProducto(producto.idProducto)">
-                  <img src="./../../../assets/icons/eliminar.png" alt=" ">
-              </button>
-              <p>Bs.- {{productosCarrito[i].precio}},00</p>
-          </div>
-     </ng-container>
+    <ng-container *ngIf="productosCarrito[i]">
+      <div id="izq" [ngStyle]="{'background-image':'url('+productosCarrito[i].fotoUrl+')'}">
+      </div>
+      <div id="centro">
+        <p>{{productosCarrito[i].nombre}}</p>
+        <p *ngIf="producto.notas[i] !==''">{{producto.notas}}</p> 
+        <app-contador-cantidad [cantidadInicial]="producto.cantidad"
+         (cantidadCambiada)="cambiarCantidadProducto(producto.idProducto,$event)">   
+        </app-contador-cantidad>
+    </div>
+      <div id="der">
+        <button id="borrar" (click)="eliminarProducto(producto.idProducto)">
+          <img src="./../../../assets/icons/eliminar.png" alt=" ">
+        </button>
+        <p>Bs.- {{productosCarrito[i].precio}},00</p>
+      </div>
+    </ng-container>
   </div>
 </div>
+
 <a [routerLink]="['/']" routerLinkActive="routerLinkActive">Home</a>
 
 <section>
@@ -33,6 +34,7 @@
       </a>
     </div>
   </div>
+
   <div class="precios">
     <div>
       <p>Sub Total ......</p>
@@ -45,6 +47,32 @@
       <p>Bs.- <span>{{total}},00</span></p>
     </div>
   </div>
+
+  <div>
+    <h2>Carrito de Compras</h2>
+    
+    <label for="metodo-pago">Método de Pago:</label>
+    <select [(ngModel)]="metodoPago" id="metodo-pago">
+      <option value="QR">QR</option>
+      <option value="Efectivo">Efectivo</option>
+    </select>
+
+    <div>
+      <label for="monto">Monto Total:</label>
+      <input type="number" [(ngModel)]="monto" id="monto" />
+    </div>
+
+    <div>
+      <label for="pagoRealizado">Pago Realizado:</label>
+      <input type="number" [(ngModel)]="pagoRealizado" id="pagoRealizado" />
+    </div>
+
+    <button (click)="verificarPago()">Verificar Pago</button>
+
+    <div *ngIf="estadoTransaccion">
+      <p>Estado de la transacción: {{ estadoTransaccion }}</p>
+    </div>
+  </div>
+
   <button id="enviar">Enviar Mensaje</button>
 </section>
-
