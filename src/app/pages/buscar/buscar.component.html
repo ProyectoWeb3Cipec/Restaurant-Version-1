@@ -1,1 +1,29 @@
+<div class="search-container">
+  <h2>Buscar en el Menú</h2>
+  <input
+    type="text"
+    [(ngModel)]="query"
+    (input)="onSearch()"
+    placeholder="Ingrese la palabra clave..."
+    class="search-input"
+  />
+
+  <div class="filter-container">
+    <label for="category">Filtrar por categoría:</label>
+    <select id="category" [(ngModel)]="selectedCategory" (change)="onCategoryChange()">
+      <option value="">Todas</option>
+      <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+    </select>
+  </div>
+
+  <h3>Resultados de búsqueda</h3>
+  <ul *ngIf="filteredResults.length > 0">
+    <li *ngFor="let item of filteredResults">
+      {{ item.name }} - ${{ item.price }}
+    </li>
+  </ul>
+  
+  <p *ngIf="filteredResults.length === 0">No se encontraron resultados.</p>
+</div>
+
 
