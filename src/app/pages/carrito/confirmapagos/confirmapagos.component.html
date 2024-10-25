@@ -1,0 +1,17 @@
+
+
+<div class="container">
+  <h1>Pago</h1>
+  <form>
+    <!-- Campos de pago -->
+    <button (click)="realizarPago()">Realizar pago</button>
+  </form>
+  <div *ngIf="pagoRealizado">
+    <h2>Confirmación de pago</h2>
+    <p>{{ mensajeConfirmacion }}</p>
+  </div>
+  <div *ngIf="!pagoRealizado && mensajeConfirmacion">
+    <h2>Error de pago</h2>
+    <p>{{ mensajeConfirmacion }}</p>
+  </div>
+</div>
