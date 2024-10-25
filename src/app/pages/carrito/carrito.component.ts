@@ -7,7 +7,7 @@ import { ProductosService } from '../../core/services/productos.service';
 import { Producto } from '../../core/interfaces/productos';
 import { RouterModule } from '@angular/router';
 import { PaymentService } from '../../core/services/payment.service';
-import { FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms'; 
 
 
 @Component({
