@@ -1,0 +1,20 @@
+header{
+    height: 80px;
+    background-color: rgb(132, 213, 248);
+    border-radius: 0 0 15px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    transition: 500ms ease-in-out;
+}
+h1{
+    font-size: xx-large;
+    font-weight: 800;
+    margin: bottom 20px;
+}
+.extendido{
+  height: 200px;
+  background-image: url("./../../../../assets/icons/restaurant.jpg");
+  background-position: center;
+  background-size: cover;
+}

@@ -1,0 +1,22 @@
+
+#container{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(43, 186, 226);
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    height: 80px;
+}
+.tab{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg{
+        display: block;
+        margin: auto;
+    }
+}
+.seleccionado{
+    background-color: aquamarine
+}

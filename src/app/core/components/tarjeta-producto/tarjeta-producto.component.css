@@ -1,0 +1,30 @@
+#container{
+    height: 100%;
+    display:flex;
+    flex:auto;
+    background-color:rgb(237, 165, 237);
+    border-radius: 10px;
+    overflow: hidden;
+    gap: 5px;
+}
+h4{
+    font-weight: bold;
+    font-family: 20px;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+img{
+    width:25%;
+    margin-bottom: 5px;
+    margin-bottom: 5px;
+}
+p{
+    font-weight: bold;
+    margin-top: auto;
+    text-align: end;
+}
+ul il{
+    max-height: 100%;
+    display:inline-flexbox;
+}

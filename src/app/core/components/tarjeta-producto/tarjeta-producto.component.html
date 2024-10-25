@@ -1,0 +1,11 @@
+<div id="container">
+    <img src="{{producto.fotoUrl}}" alt="{{producto.nombre}}">
+    <ul>
+        <h4>{{producto.nombre}}</h4>
+        <li *ngFor="let ingredientes of producto.Ingredientes">
+            {{ingredientes}}
+        </li>
+        <p>Bs. {{producto.precio}},00.-</p>
+    </ul>
+</div>
+

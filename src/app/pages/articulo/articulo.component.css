@@ -1,0 +1,82 @@
+
+img{
+    width:25%;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 500px;
+}
+ul li{
+    font-weight: bolder;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 555px;
+}
+
+#apto-container{
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 555px;
+}
+span{
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 555px;
+    font-weight: bold;
+    font-size: 30px;
+}
+.apto{
+    width: 60px;
+    margin-inline-start: 40%;
+}
+
+p{
+    border: 2px rgb(131, 131, 245);
+    padding: 10px;
+    width: 110px;
+    border-radius: 15px 15px;
+    margin: auto;
+    background-color: rgb(124, 201, 225);
+    font-weight: bold;
+    font-size: 20px;
+    margin-inline-start: 42%;
+}
+
+textarea{
+    border: 2px rgb(131, 131, 245);
+    padding: 10px;
+    width: 500px;
+    border-radius: 15px 15px;
+    margin: auto;
+    display: block;
+    background-color: rgb(124, 201, 225);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#cantidad-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 640px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+ button{
+    display:block;
+    margin: auto;
+    align-items: center;
+    width: 200px;
+    border-radius: 20px;
+    border:unset;
+    background-color: rgb(124, 201, 225);
+    font-size: larger;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Transición suave */
+    transform: scale(1);
+}
+button:hover{
+    transform: scale(1.05);
+}

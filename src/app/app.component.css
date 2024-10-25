@@ -1,0 +1,15 @@
+app-tabs{
+    margin-top: auto;
+}
+div {
+    display: flex;
+    justify-content: center;
+  }
+
+div a{
+    margin: 10px;
+    color: rgb(2, 2, 61);
+    text-decoration: none;
+    font-weight: bold;
+}
+  

@@ -1,0 +1,53 @@
+<div tarjetas-container>
+  <div *ngFor="let producto of cartService.carrito, index as i" class="tarjeta-producto-container">
+     <ng-container *ngIf="productosCarrito[i]">
+          <div id="izq" [ngStyle]="{'background-image':'url('+productosCarrito[i].fotoUrl+')'}">
+          </div>
+          <div id="centro">
+              <p>{{productosCarrito[i].nombre}}</p>
+              <p *ngIf="producto.notas[i] !==''">{{producto.notas}}</p> 
+              <app-contador-cantidad [cantidadInicial]="producto.cantidad"
+               (cantidadCambiada)="cambiarCantidadProducto(producto.idProducto,$event)">   
+              </app-contador-cantidad>
+          </div>
+          <div id="der">
+              <button id="borrar" (click)="eliminarProducto(producto.idProducto)">
+                  <img src="./../../../assets/icons/eliminar.png" alt="Eliminar producto">
+              </button>
+              <p>Bs.- {{productosCarrito[i].precio}},00</p>
+          </div>
+     </ng-container>
+  </div>
+</div>
+
+<a [routerLink]="['/']" routerLinkActive="routerLinkActive">Home</a>
+
+<section>
+  <div class="direc-container">
+    <h3><span style="color: rgb(207, 68, 68);"><b>Dirección de envío</b></span></h3>
+    <h4>Calle Jordán #123</h4>
+    <h4>Teléfono: (591)7545655</h4>
+    <p>Zona Central</p>
+    <div>
+      <a routerLink="/perfil">
+        <img src="./../../../assets/icons/lapiz.png" alt="Editar">
+      </a>
+    </div>
+  </div>
+
+  <div class="precios">
+    <div>
+      <p>Sub Total ......</p>
+      <p>Delivery .......</p>
+      <p>Total ..........</p>
+    </div>
+    <div>
+      <p>Bs.- <span>{{subtotal}},00</span></p>
+      <p>Bs.- <span>{{delivery}},00</span></p>
+      <p>Bs.- <span>{{total}},00</span></p>
+    </div>
+  </div>
+
+  >
+  <button id="enviar" (click)="enviarMensaje()">Enviar Mensaje</button>
+</section>

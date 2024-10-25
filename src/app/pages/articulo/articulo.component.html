@@ -1,0 +1,21 @@
+<img src="{{producto?.fotoUrl}}" alt="{{producto?.nombre}}">
+  <ul>
+    <span>Ingredientes: </span>
+    <li *ngFor="let ingrediente of producto?.Ingredientes">{{ingrediente}}</li>
+    <p>Bs. {{producto?.precio}},00.-</p>
+  </ul>
+  <div>
+    <div class="apto-container" *ngIf="producto?.esVegetariano">
+      <img class="apto" src="./../../../assets/icons/vegetariano.png" alt="Apto Vegetariano">
+    </div>
+    <div class="apto-container" *ngIf="producto?.esVegano">
+      <img class="apto" src="./../../../assets/icons/vegana1.jpg" alt="Apto Vegano">
+    </div>
+  </div>
+  <textarea name="notas" id="notas" cols="30" rows="10" placeholder="Escriba sus Notas aquí" [(ngModel)]="notas"></textarea>
+  <div id="cantidad-container">
+    <label for="cantidad">Cantidad:</label>
+    <app-contador-cantidad (cantidadCambiada)="cantidad.set($event)"></app-contador-cantidad>
+  </div>
+  <button (click)="agregarAlCarrito()">Agregar al carrito</button>
+

@@ -1,0 +1,246 @@
+[
+    {
+       "id":1,
+       "nombre":"Pizzas",
+       "fotoUrl":"./../../../assets/icons/Pizza.jpg",
+       "productos":[
+               {
+                    "id":"1",
+                    "nombre":"Pizza Hawaiana",
+                    "precio":50.00,
+                    "esVegano":false,
+                    "esVegetariano":false,
+                    "Ingredientes":["Tomate", "queso Mozarella","Pedazos de Piña"],
+                    "fotoUrl":"./../../../assets/icons/hawaiana.jpg"
+             },
+             {
+                "id":"2",
+                "nombre":"Pizza Napolitana",
+                "precio":60.00,
+                "esVegano":false,
+                "esVegetariano":false,
+                "Ingredientes":["Tomate", "queso Mozarella","Hojas de Albahaca", "Aceite de Oliva"],
+                "fotoUrl":"./../../../assets/icons/napolitana.jpg"
+         },
+      
+         {
+                "id":"3",
+                "nombre":"Pizza Vegetariana",
+                "precio":50.00,
+                "esVegano":false,
+                "esVegetariano":false,
+                "Ingredientes":["Tomate", "queso Mozarella","Pedazos de Piña"],
+                "fotoUrl":"./../../../assets/icons/pizzavegetariana.jpg"
+     }
+       ]
+    },
+
+    {
+       "id":2,
+       "nombre":"Hamburguesas",
+       "fotoUrl":"./../../../assets/icons/hamburguesas.jpg",
+       "productos":[
+           {
+               "id":"20",
+               "nombre":"Hamburguesa con queso",
+               "precio":20.00,
+               "esVegano":false,
+               "esVegetariano":false,
+               "Ingredientes":["Carne de Res 1/4 libra", "Salsa", "Tomate", "Queso"],
+               "fotoUrl":"./../../../assets/icons/hamburguesa-queso-receta.jpg"
+           },
+   
+           {
+               "id":"21",
+               "nombre":"Hamburguesa Especial",
+               "precio":30.00,
+               "esVegano":false,
+               "esVegetariano":false,
+               "Ingredientes":["Carne de Res 1/4 libra","Ensalada", "Salsa","Queso","Tocino"],
+               "fotoUrl":"./../../../assets/icons/especial.jpg"
+           },
+   
+           {
+               "id":"22",
+               "nombre":"Hamburguesa Vegana",
+               "precio":35.00,
+               "esVegano":true,
+               "esVegetariano":false,
+               "Ingredientes":["Carne de Soya Especial","Ensalada", "Salsa","Queso","Pan Especial"],
+               "fotoUrl":"./../../../assets/icons/vegana.jpg"
+           },
+   
+           {
+               "id":"23",
+               "nombre":"Hamburguesa Americana",
+               "precio":40.00,
+               "esVegano":false,
+               "esVegetariano":false,
+               "Ingredientes":["Carne de Ternera 1/4 libra","Ensalada", "Salsa","Queso","Tocino"],
+               "fotoUrl":"./../../../assets/icons/hamurguesa-americana.jpg"
+           },
+           {
+               "id":"24",
+               "nombre":"Hamburguesa Doble Carne",
+               "precio":50.00,
+               "esVegano":false,
+               "esVegetariano":false,
+               "Ingredientes":["Carne de Res 1/2 libra","Ensalada", "Salsa","Queso"],
+               "fotoUrl":"./../../../assets/icons/doble-carne.jpg"
+           },
+   
+           {
+               "id":"25",
+               "nombre":"Hamburguesa Vegetariana",
+               "precio":25.00,
+               "esVegano":false,
+               "esVegetariano":true,
+               "Ingredientes":["Carne de Medallon","Ensalada", "Salsa","Queso"],
+               "fotoUrl":"./../../../assets/icons/vegetariana.jpeg"
+           }
+       ]
+    },
+   
+    {
+           "id":3,
+           "nombre":"Postres",
+           "fotoUrl":"./../../../assets/icons/Postres.jpg",
+           "productos":[
+            {
+                "id":"30",
+               "nombre":"Ensalada de Frutas",
+               "precio":10.00,
+               "esVegano":false,
+               "esVegetariano":false,
+               "Ingredientes":["Naranja","Uva", "Manzana","Plátano", "Durazno"],
+               "fotoUrl":"./../../../assets/icons/postrefrutas.jpg"
+            },
+            {
+                "id":"31",
+               "nombre":"Crema Chantilly con Gelatina",
+               "precio":12.00,
+               "esVegano":false,
+               "esVegetariano":false,
+               "Ingredientes":["Leche Evaporada","Limón", "Azúcar", "Gelatina de Fresas"],
+               "fotoUrl":"./../../../assets/icons/chantillygelatina.avif"
+            },
+            {
+                "id":"32",
+               "nombre":"Flan de Vainilla",
+               "precio":14.00,
+               "esVegano":false,
+               "esVegetariano":false,
+               "Ingredientes":["Azúcar","leche condensada","Leche evaporada","Huevos","Extracto de Vainilla"],
+               "fotoUrl":"./../../../assets/icons/flancasero.jpg"
+            }
+           ]
+    },
+   
+    {
+           "id":4,
+           "nombre":"Bebidas",
+           "fotoUrl":"./../../../assets/icons/Bebidas.jpg",
+           "productos":[
+            {
+                "id":"40",
+               "nombre":"Gaseosas 2Lts",
+               "precio":12.00,
+               "esVegano":false,
+               "esVegetariano":false,
+               "Ingredientes":["Cocacola","Fanta","Spry","Pepsi","Oro"],
+               "fotoUrl":"./../../../assets/icons/gaseosas.jpg"
+            },
+            {
+                "id":"41",
+               "nombre":"Refrescos Naturales",
+               "precio":10.00,
+               "esVegano":false,
+               "esVegetariano":false,
+               "Ingredientes":["Durazo","Linaza","Lima","Limonada","Maracuyá"],
+               "fotoUrl":"./../../../assets/icons/refresconatural.jpg"
+            },
+            {
+               "id":"42",
+               "nombre":"Jugos Naturales con Leche",
+               "precio":13.00,
+               "esVegano":false,
+               "esVegetariano":false,
+               "Ingredientes":["Jugo Verde","Frutilla","Manzana","Platano"],
+               "fotoUrl":"./../../../assets/icons/jugosnaturales.jpg"
+            }
+           ]
+    },
+   
+   {
+           "id":5,
+           "nombre":"Combos",
+           "fotoUrl":"./../../../assets/icons/Combos.jpg",
+           "productos":[
+            {
+               "id":"51",
+               "nombre":"Hamburguesa con queso y Pizza Hawahiana",
+               "precio":40.00,
+               "esVegano":false,
+               "esVegetariano":false,
+               "Ingredientes":[""],
+               "fotoUrl":"./../../../assets/icons/combo1.jpg"     
+            },
+            {
+               "id":"52",
+               "nombre":"Hamburguesa Americana y una Soda Familiar",
+               "precio":30.00,
+               "esVegano":false,
+               "esVegetariano":false,
+               "Ingredientes":[""],
+               "fotoUrl":"./../../../assets/icons/combo2.jpg"
+            },
+
+            {
+               "id":"53",
+               "nombre":"Pizza Napolitana y Jugo de Frutas",
+               "precio":60.00,
+               "esVegano":false,
+               "esVegetariano":false,
+               "Ingredientes":[""],
+               "fotoUrl":"./../../../assets/icons/combo3.png"
+            }
+           ]
+   },
+   
+   {
+           "id":6,
+           "nombre":"Promociones 2X1",
+           "fotoUrl":"./../../../assets/icons/DosX1.jpg",
+           "productos":[
+            {
+               "id":"61",
+               "nombre":"2 Hamburguesas Americanas por el precio de 1",
+               "precio":40.00,
+               "esVegano":false,
+               "esVegetariano":false,
+               "Ingredientes":["Carne de Ternera 1/4 libra","Ensalada", "Salsa","Queso","Tocino"],
+               "fotoUrl":"./../../../assets/icons/2x1(1).jpg"
+            },
+            {
+               "id":"62",
+               "nombre":"2 Pizzas Vegetarianas por el precio de 1",
+               "precio":50.00,
+               "esVegano":false,
+               "esVegetariano":false,
+               "Ingredientes":["Tomate", "queso Mozarella","Pedazos de Piña"],
+               "fotoUrl":"./../../../assets/icons/2x1(2).jpg"
+            },
+            {
+               "id":"63",
+               "nombre":"2 Postres a eleccion por el precio de 1",
+               "precio":13.00,
+               "esVegano":false,
+               "esVegetariano":false,
+               "Ingredientes":["Frutas Frescas", "Leche","Chocolate"],
+               "fotoUrl":"./../../../assets/icons/2x1(3).jpg"
+            }
+
+           ]
+   }
+]
+ 

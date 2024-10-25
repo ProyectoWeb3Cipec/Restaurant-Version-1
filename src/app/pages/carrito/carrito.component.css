@@ -1,0 +1,136 @@
+#tarjetas-container{
+    flex-direction: column;
+    gap: 15px;
+    pad: 10px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.tarjeta-producto-container {
+    display: flex;
+    height: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+ 
+    >div{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-between;
+        padding: 15px;
+    }
+}
+#izq{
+    margin-left: 20%;
+    width:14%;
+    background-size: contain;
+    background-position:center;
+    background-color: beige;
+    border-radius: 15px;
+}
+
+#centro{
+    width:25%;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(211, 198, 250, 0.816);
+    justify-content: space-between;
+    font-weight: bold;
+    }
+
+#der{
+    width: 8%;
+    background-color: rgba(245, 245, 220, 0.394);
+    justify-content: space-between;
+    font-weight: bold;
+    }
+
+#borrar img {
+    width:30px;
+    height: auto;
+}
+a.routerLinkActive {
+    font-size: 15px;
+    font-weight: bold;
+    border: 1px solid black;
+    text-decoration: none;
+    margin-left: 47%;
+    background-color:  rgb(189, 249, 249);
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+  
+.precios {
+    background-color: rgb(189, 249, 249);
+    justify-content: center;
+    display:flex;
+    justify-content: space-between;
+    margin-left: 85%;
+    border: 1px solid black;
+    font-weight: bold;
+    pad: 15 px 15px;
+    border-radius: 10px 10px;
+    box-shadow: 10px 10px gray;
+}
+
+.precios p{
+    text-align: 30%;
+    justify-content: center;
+    padding: 10px 10px;
+}
+
+.precios span{
+    float: right;
+    justify-content: center;
+   
+}
+
+#enviar{
+    display: block;
+    width: 30%;
+    margin-left:36%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: larger;
+    background-color: rgb(189, 249, 249);
+    border: 1px solid black;
+    cursor:grabbing;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 10px 10px gray;
+    font-weight: bold; 
+}
+/* styles.css */
+
+/* Cambia el color cuando se pase el mouse sobre el botón */
+#enviar:hover {
+    background-color: #008cff86;
+  }
+  
+  #enviar:active {
+    transform: scale(0.95); /* Reduce ligeramente el tamaño */
+  }
+
+p{
+    justify-content: center;
+    text-align: center;
+    font-weight: bold; 
+}
+
+.direc-container {
+    background-color: rgb(189, 249, 249);
+    padding: 10px;
+    border: 1px solid black;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 10px;
+    border-radius: 15px 15px;
+    box-shadow: 10px 10px gray;
+    margin-top: 20px;
+    margin-left: 40%;
+    margin-right: 40%;
+  }
+  
+  
+
