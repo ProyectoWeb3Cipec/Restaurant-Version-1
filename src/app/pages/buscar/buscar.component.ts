@@ -4,7 +4,7 @@ import { HeaderService } from '../../core/services/header.service';
 @Component({
   selector: 'app-buscar',
   templateUrl: './buscar.component.html',
-  styleUrls: ['./buscar.component.css']
+  styleUrl: './buscar.component.css'
 })
 export class BuscarComponent {
   headerService = inject(HeaderService);

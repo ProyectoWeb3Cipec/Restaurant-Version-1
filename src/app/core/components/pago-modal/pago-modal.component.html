@@ -1,0 +1,75 @@
+<div *ngIf="isOpen" class="modal">
+  <div class="modal-content">
+    <button class="close-button" (click)="cerrarModal()">✖</button>
+    <h2>Selecciona el método de pago</h2>
+    <select id="opcionesPago" [(ngModel)]="opcionSeleccionada" (change)="seleccionarPago(opcionSeleccionada)">
+      <option value="">Seleccione un método de pago</option>
+      <option value="qr">QR</option>
+      <option value="tarjeta">Tarjeta de Crédito/Débito</option>
+      <option value="efectivo">Efectivo</option>
+    </select>
+
+    <div *ngIf="opcionSeleccionada">
+      <div *ngIf="opcionSeleccionada === 'qr'" class="pago-opcion">
+        <img src="../../.././../assets/icons/programador.png" alt="QR Code" class="qr-img" />
+        <div class="info-pago">
+          <p>Subtotal: {{ subtotal }}</p>
+          <p>Delivery: {{ delivery }}</p>
+          <p>Total: {{ total }}</p>
+        </div>
+      </div>
+
+      <div *ngIf="opcionSeleccionada === 'tarjeta'" class="pago-opcion">
+        <h3>Formulario de Pago con Tarjeta</h3>
+        <form class="form-pago" #tarjetaForm="ngForm" novalidate>
+          <div class="form-group">
+            <label for="nombre">Nombre en la tarjeta:</label>
+            <input type="text" id="nombre" [(ngModel)]="datosTarjeta.nombre" name="nombre" required />
+            <div *ngIf="tarjetaForm.submitted && !datosTarjeta.nombre" class="error">
+              Este campo es obligatorio.
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="numero">Número de tarjeta:</label>
+            <input 
+              type="text" 
+              id="numero" 
+              [(ngModel)]="datosTarjeta.numero" 
+              name="numero" 
+              required 
+              maxlength="19" 
+              (input)="formatearNumeroTarjeta()"
+              placeholder="**** **** **** ****"
+            />
+            <div *ngIf="tarjetaForm.submitted && !validarNumero()" class="error">
+              El número de tarjeta no es válido.
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="cvv">Código CVV:</label>
+            <input type="text" id="cvv" [(ngModel)]="datosTarjeta.cvv" name="cvv" required maxlength="3" />
+            <div *ngIf="tarjetaForm.submitted && !validarCVV()" class="error">
+              El código CVV no es válido.
+            </div>
+          </div>
+          <p>Subtotal: {{ subtotal }}</p>
+          <p>Delivery: {{ deliveryAmount }}</p>
+          <p>Total: {{ total }}</p> 
+          <button type="button" (click)="botonClick()" [disabled]="!tarjetaForm.valid || !validarNumero() || !validarCVV()">{{ botonTexto }}</button>
+        </form>
+      </div>
+
+      <div *ngIf="opcionSeleccionada === 'efectivo'" class="pago-opcion">
+        <h3>Pago en Efectivo</h3>
+        <label for="efectivo">Monto en efectivo:</label>
+        <input type="number" id="efectivo" [(ngModel)]="datosEfectivo" name="efectivo" required />
+        <div class="info-pago">
+          <p>Total: {{ total }}</p>
+        </div>
+        <button type="button" (click)="procesarPago()">Pagar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
